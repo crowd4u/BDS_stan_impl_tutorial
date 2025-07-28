@@ -1,0 +1,11 @@
+
+services:
+  cmdstanpy:
+    build:
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    container_name: cmdstanpy_container
+    ports:
+      - "8008:8888"
+    command: jupyter lab --ip=0.0.0.0 --no-browser --allow-root 
